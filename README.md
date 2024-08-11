@@ -34,5 +34,11 @@ supports multiple languages for global accessibility, and includes a feedback me
       npm install
       cd ..
       ```
-3. **Run the program**
+3. **Create .env file in the root directory and .env.local file in the frontend directory:**
+   - Write:
+       ```
+      API_KEY= *insert your google API key here*
+      REACT_APP_FIREBASE_API_KEY= *insert your firebase API key here*
+      ```
+4. **Run the program**
    - Run: `npm start`
