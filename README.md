@@ -13,7 +13,6 @@ supports multiple languages for global accessibility, and includes a feedback me
   <img src="assets/4.png" alt="Image 4" style="margin: 10px;">
   <img src="assets/5.png" alt="Image 5" style="margin: 10px;">
   <img src="assets/6.png" alt="Image 6" style="margin: 10px;">
-  <img src="assets/7.png" alt="Image 7" style="margin: 10px;">
 </div>
 
 <br>
