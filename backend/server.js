@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+
 const {
   GoogleGenerativeAI,
   HarmCategory,
@@ -11,6 +12,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
+
 
 const MODEL_NAME = "gemini-1.5-pro";
 const API_KEY = process.env.API_KEY;

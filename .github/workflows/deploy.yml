@@ -1,0 +1,32 @@
+name: Deploy Backend with CockroachDB
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+        working-directory: backend
+
+      - name: Set up CockroachDB environment variables
+        run: echo "COCKROACHDB_URL=${{ secrets.COCKROACHDB_URL }}" >> $GITHUB_ENV
+
+      - name: Start Backend
+        run: |
+          echo "Starting backend..."
+          node server.js &
+        working-directory: backend
