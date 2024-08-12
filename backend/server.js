@@ -13,9 +13,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://airbnb-ai-customer-support.vercel.app', 
-  methods: ['GET', 'POST'], // Allow necessary methods
-  allowedHeaders: ['Content-Type'], // Allow necessary headers
+  origin: '*'
 }));
 
 
