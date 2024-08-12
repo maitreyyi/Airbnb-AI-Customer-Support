@@ -83,7 +83,7 @@ export default function Chatbox() {
     ]);
 
     try {
-      const response = await fetch("${process.env.API_URL}/chat", {
+      const response = await fetch("https://airbnb-ai-customer-support-backen.vercel.app/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -127,7 +127,7 @@ export default function Chatbox() {
     ]);
 
     try {
-      const response = await fetch("${process.env.API_URL}/chat", {
+      const response = await fetch("https://airbnb-ai-customer-support-backen.vercel.app/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
