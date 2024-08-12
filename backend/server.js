@@ -13,7 +13,9 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://airbnb-ai-customer-support.vercel.app/', 
+  origin: 'https://airbnb-ai-customer-support.vercel.app', 
+  methods: ['GET', 'POST'], // Allow necessary methods
+  allowedHeaders: ['Content-Type'], // Allow necessary headers
 }));
 
 
@@ -53,6 +55,7 @@ async function runChat(userInput) {
 
   return { text: response.text(), messageId };
 }
+app.options('/chat', cors()); // Enable CORS for the /chat endpoint
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
