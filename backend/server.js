@@ -11,7 +11,10 @@ const dotenv = require("dotenv").config({ path: "../.env" });
 const app = express();
 const port = process.env.PORT || 5000;
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://airbnb-ai-customer-support.vercel.app', 
+}));
 
 
 const MODEL_NAME = "gemini-1.5-pro";
